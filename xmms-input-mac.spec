@@ -1,5 +1,5 @@
 Summary:	This is an input plugin for XMMS which plays ape
-Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±cy pliki ape
+Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki ape
 Name:		xmms-input-mac
 Version:	0.5
 Release:	0.1
@@ -24,9 +24,9 @@ Wtyczka dla XMMS umo¿liwiaj±ca odtwarzanie plików w formacie ape
 sed -i -e 's@-O3 -shared@-shared %{rpmcflags}@' Makefile
 
 %build
-%{__make} CPPOPT="%{rpmcflags}" \
-	  COMPILER="%{__cc}" \
-	  build
+%{__make} build \
+	CPPOPT="%{rpmcflags}" \
+	COMPILER="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
