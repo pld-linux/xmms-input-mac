@@ -4,7 +4,8 @@ Name:		xmms-input-mac
 Version:	0.3.0
 Release:	1
 Epoch:		1
-License:	GPL
+# license conflict with mac
+License:	GPL (for personal and educational use; non-distributable in binary form)
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/mac-port/xmms-mac-%{version}.tar.gz
 # Source0-md5:	b7a0b8225bdf519d4f2f9537da925c3d
