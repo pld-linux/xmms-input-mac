@@ -13,6 +13,8 @@ URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	sed >= 4.0
 BuildRequires:	mac-devel
 BuildRequires:	xmms-devel
+# because of mac
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
