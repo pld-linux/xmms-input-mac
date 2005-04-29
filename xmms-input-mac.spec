@@ -1,14 +1,14 @@
 Summary:	Input plugin for XMMS which plays ape
 Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki ape
 Name:		xmms-input-mac
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 Epoch:		1
 # license conflict with mac
 License:	GPL (for personal and educational use; non-distributable in binary form)
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/mac-port/xmms-mac-%{version}.tar.gz
-# Source0-md5:	b7a0b8225bdf519d4f2f9537da925c3d
+# Source0-md5:	7a4be5e3433c68f155f5b2913e4f21ba
 URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	sed >= 4.0
 BuildRequires:	mac-devel
@@ -28,13 +28,17 @@ Wtyczka dla XMMS umo¿liwiaj±ca odtwarzanie plików w formacie ape
 %setup -q -n xmms-mac-%{version}
 
 %build
-%configure
+%configure \
+	--disable-static
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{xmms_input_plugindir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
