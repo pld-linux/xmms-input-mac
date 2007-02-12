@@ -1,5 +1,5 @@
 Summary:	Input plugin for XMMS which plays ape
-Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki ape
+Summary(pl.UTF-8):   Wtyczka wejÅ›ciowa dla XMMS-a odtwarzajÄ…ca pliki ape
 Name:		xmms-input-mac
 Version:	0.3.1
 Release:	1
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Plugin for XMMS playing Monkey's Audio Codec (ape) files.
 
-%description -l pl
-Wtyczka dla XMMS umo¿liwiaj±ca odtwarzanie plików w formacie ape
+%description -l pl.UTF-8
+Wtyczka dla XMMS umoÅ¼liwiajÄ…ca odtwarzanie plikÃ³w w formacie ape
 (Monkey's Audio Codec).
 
 %prep
