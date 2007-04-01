@@ -14,7 +14,7 @@ BuildRequires:	sed >= 4.0
 BuildRequires:	mac-devel
 BuildRequires:	xmms-devel
 # because of mac
-ExclusiveArch:	%{ix86}
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
